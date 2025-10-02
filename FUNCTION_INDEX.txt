@@ -1,0 +1,248 @@
+================================================================================
+    NODE AUTOMATION LAUNCHER - FUNCTION INDEX
+================================================================================
+Version: 2.0
+Last Updated: 2025-10-02
+Total Lines: 7,464
+
+================================================================================
+TABLE OF CONTENTS - MAIN SECTIONS
+================================================================================
+
+1. IMPORTS & CONFIGURATION ........................... Lines 1-150
+2. CORE CLASSES ...................................... Lines 150-800
+3. VISUALIZATION CLASSES ............................. Lines 800-1200
+4. MAIN APPLICATION CLASS ............................ Lines 1200-7400
+5. MAIN EXECUTION .................................... Lines 7400-7464
+
+================================================================================
+DETAILED FUNCTION INDEX
+================================================================================
+
+SECTION 1: IMPORTS & GLOBAL CONFIGURATION (Lines 1-150)
+--------------------------------------------------------
+Line 1-50:    Standard library imports (os, sys, json, datetime, etc.)
+Line 51-100:  Third-party imports (tkinter, matplotlib, threading)
+Line 101-150: Global configuration (THEMES, app_settings, AUTOMATION_SCRIPTS)
+
+SECTION 2: CORE UTILITY FUNCTIONS (Lines 150-800)
+--------------------------------------------------
+Line 150:  log_message() - Central logging function
+Line 180:  cleanup_old_logs() - Log file maintenance
+Line 210:  get_system_info() - System information retrieval
+Line 240:  check_disk_usage() - Disk space calculation
+Line 270:  get_process_list() - Running process enumeration
+
+SECTION 3: VISUALIZATION CLASSES (Lines 800-1200)
+--------------------------------------------------
+Line 800:  EnhancedUIComponents class
+Line 820:  - create_animated_progress_bar()
+Line 850:  - show_toast_notification()
+Line 880:  - create_hover_tooltip()
+Line 910:  - create_enhanced_button()
+
+Line 950:  VisualizationManager class
+Line 970:  - create_pie_chart()
+Line 1000: - create_bar_chart()
+Line 1030: - create_line_graph()
+Line 1060: - create_gauge_widget()
+Line 1090: - embed_matplotlib_figure()
+
+SECTION 4: MAIN APPLICATION CLASS (Lines 1200-7400)
+----------------------------------------------------
+
+4.1 INITIALIZATION (Lines 1200-1500)
+Line 1200: NodeAutomationLauncher class definition
+Line 1220: __init__() - Main initialization
+Line 1250: load_config() - Load JSON configuration
+Line 1280: setup_logging() - Configure logging system
+Line 1310: init_database() - Initialize SQLite database
+Line 1340: setup_ui() - Create main window and UI
+
+4.2 TAB CREATION METHODS (Lines 1500-3500)
+Line 1500: create_automation_tab() - Automation Scripts tab
+Line 1700: create_dashboard_tab() - Dashboard with metrics
+Line 1900: create_space_analyzer_tab() - Disk space analyzer
+Line 2100: create_processes_tab() - Process management
+Line 2300: create_system_tab() - System information
+Line 2500: create_debug_logs_tab() - Debug logging interface
+Line 2800: create_network_tab() - Network connection monitoring
+Line 3100: create_settings_tab() - Settings and configuration
+
+4.3 AUTOMATION SCRIPT FUNCTIONS (Lines 3500-3800)
+Line 3500: launch_script() - Launch automation script
+Line 3530: stop_script() - Stop running script
+Line 3560: update_script_status() - Update script status display
+Line 3590: get_script_info() - Get script process information
+
+4.4 DASHBOARD FUNCTIONS (Lines 3800-4200)
+Line 3800: update_dashboard() - Refresh dashboard metrics
+Line 3850: update_metric_cards() - Update CPU/Memory/Disk cards
+Line 3900: update_system_events() - Update event timeline
+Line 3950: update_performance_history() - Update performance graphs
+Line 4000: show_health_check() - Run system health check
+Line 4050: auto_fix_issues() - Automated issue resolution
+
+4.5 SPACE ANALYZER FUNCTIONS (Lines 4200-4700)
+Line 4200: scan_large_files() - Scan for large files
+Line 4250: apply_enhanced_space_filters() - Apply file filters
+Line 4300: delete_selected_files() - Delete selected files
+Line 4350: open_file_location() - Open file in file manager
+Line 4400: export_space_report() - Export analysis report
+Line 4450: show_disk_details() - Show detailed disk breakdown
+Line 4500: calculate_directory_size() - Calculate directory sizes
+
+4.6 PROCESS MANAGEMENT FUNCTIONS (Lines 4700-5100)
+Line 4700: update_processes_display() - Refresh process list
+Line 4750: kill_process() - Terminate process by PID
+Line 4800: force_kill_process() - Force kill unresponsive process
+Line 4850: get_process_details() - Get detailed process info
+Line 4900: update_resource_chart() - Update resource usage chart
+
+4.7 SYSTEM MONITORING FUNCTIONS (Lines 5100-5500)
+Line 5100: update_system_display() - Refresh system information
+Line 5150: get_cpu_usage() - Get CPU usage percentage
+Line 5200: get_memory_usage() - Get memory usage stats
+Line 5250: get_disk_usage() - Get disk usage breakdown
+Line 5300: show_performance_recommendations() - Show optimization tips
+
+4.8 DEBUG LOG FUNCTIONS (Lines 5500-6100)
+Line 5500: update_debug_logs() - Auto-refresh debug logs
+Line 5550: refresh_debug_logs() - Manual log refresh
+Line 5600: clear_debug_logs() - Clear log display
+Line 5650: search_debug_logs() - Search logs by keyword
+Line 5700: export_debug_logs() - Export logs to file
+Line 5750: apply_log_filter() - Filter logs by type
+Line 5800: apply_advanced_filter() - Advanced filtering (time/keyword)
+Line 5850: select_all_debug_filters() - Select all filter checkboxes
+Line 5900: clear_all_filters() - Clear all filter checkboxes
+Line 5950: reset_keyword_filter() - Reset keyword filter
+Line 6000: copy_debug_logs_to_clipboard() - Copy logs to clipboard
+Line 6050: analyze_debug_logs() - Analyze logs and show popup
+
+4.9 NETWORK MONITORING FUNCTIONS (Lines 6100-6500)
+Line 6100: check_network_connections() - Check all node connections
+Line 6150: test_single_connection() - Test individual node
+Line 6200: update_network_display() - Update network status display
+Line 6250: show_connection_details() - Show detailed connection info
+Line 6300: force_network_check() - Force immediate network check
+
+4.10 SETTINGS FUNCTIONS (Lines 6500-6900)
+Line 6500: apply_theme() - Apply selected theme
+Line 6550: save_settings() - Save settings to config file
+Line 6600: load_settings() - Load settings from config
+Line 6650: add_node() - Add new network node
+Line 6700: edit_node() - Edit existing node
+Line 6750: delete_node() - Delete network node
+Line 6800: show_help_dialog() - Display help information
+
+4.11 UTILITY & HELPER FUNCTIONS (Lines 6900-7400)
+Line 6900: create_themed_text_widget() - Create styled text widget
+Line 6950: insert_themed_text() - Insert colored text
+Line 7000: create_metric_card() - Create dashboard metric card
+Line 7050: format_bytes() - Format bytes to human-readable
+Line 7100: format_uptime() - Format uptime duration
+Line 7150: validate_ip_address() - Validate IP address format
+Line 7200: get_file_icon() - Get icon for file type
+Line 7250: safe_thread_execute() - Execute function in thread safely
+Line 7300: show_confirmation_dialog() - Show confirmation popup
+Line 7350: handle_exit() - Handle application exit
+
+SECTION 5: MAIN EXECUTION (Lines 7400-7464)
+--------------------------------------------
+Line 7428: main() - Main execution function
+Line 7440: Application startup
+Line 7450: Error handling
+Line 7460: Exit cleanup
+
+================================================================================
+KEY FUNCTION CATEGORIES
+================================================================================
+
+UI CREATION FUNCTIONS:
+- create_automation_tab() ............... Line 1500
+- create_dashboard_tab() ................ Line 1700
+- create_space_analyzer_tab() ........... Line 1900
+- create_processes_tab() ................ Line 2100
+- create_system_tab() ................... Line 2300
+- create_debug_logs_tab() ............... Line 2500
+- create_network_tab() .................. Line 2800
+- create_settings_tab() ................. Line 3100
+
+UPDATE/REFRESH FUNCTIONS:
+- update_dashboard() .................... Line 3800
+- update_processes_display() ............ Line 4700
+- update_system_display() ............... Line 5100
+- update_debug_logs() ................... Line 5500
+- update_network_display() .............. Line 6200
+
+FILTER FUNCTIONS:
+- apply_enhanced_space_filters() ........ Line 4250
+- apply_log_filter() .................... Line 5750
+- apply_advanced_filter() ............... Line 5800
+- select_all_debug_filters() ............ Line 5850
+- clear_all_filters() ................... Line 5900
+- select_all_space_filters() ............ Line 2547
+- clear_all_space_filters() ............. Line 2554
+
+EXPORT FUNCTIONS:
+- export_space_report() ................. Line 4400
+- export_debug_logs() ................... Line 5700
+- copy_debug_logs_to_clipboard() ........ Line 6000
+
+VISUALIZATION FUNCTIONS:
+- create_pie_chart() .................... Line 970
+- create_bar_chart() .................... Line 1000
+- create_line_graph() ................... Line 1030
+- create_gauge_widget() ................. Line 1060
+
+PROCESS MANAGEMENT:
+- launch_script() ....................... Line 3500
+- stop_script() ......................... Line 3530
+- kill_process() ........................ Line 4750
+- force_kill_process() .................. Line 4800
+
+================================================================================
+RECENT FIXES & UPDATES (2025-10-02)
+================================================================================
+
+✅ Fixed: System tab now uses /users/paruljot directory (Line 4493)
+✅ Fixed: Debug logs show 200 lines instead of 30 (Line 5920)
+✅ Fixed: Copy button uses dual clipboard methods (Line 6022-6036)
+✅ Added: select_all_debug_filters() function (Line 7393)
+✅ Added: select_all_space_filters() function (Line 2547)
+✅ Updated: clear_all_filters() now unchecks boxes (Line 7403)
+✅ Updated: Analyze button shows popup instead of debug window (Line 7098)
+✅ Fixed: Button references updated for new filter functions (Lines 2475, 3180)
+
+================================================================================
+CRITICAL FUNCTIONS FOR TROUBLESHOOTING
+================================================================================
+
+If users report issues with:
+
+1. SCRIPTS NOT LAUNCHING:
+   → Check: launch_script() at Line 3500
+   → Check: AUTOMATION_SCRIPTS dict at Line 120
+
+2. FILTERS NOT WORKING:
+   → Check: apply_log_filter() at Line 5750
+   → Check: clear_all_filters() at Line 7403
+   → Check: log_filter_vars initialization at Line 3165
+
+3. COPY BUTTON NOT WORKING:
+   → Check: copy_debug_logs_to_clipboard() at Line 6000
+   → Verify: xclip installed for Linux clipboard
+
+4. SYSTEM TAB ERRORS:
+   → Check: show_disk_details() at Line 4450
+   → Check: user_dir configuration at Line 4493
+
+5. VISUALIZATIONS NOT SHOWING:
+   → Check: matplotlib imports at Line 50
+   → Check: python3-pil.imagetk installed
+   → Check: create_pie_chart() at Line 970
+
+================================================================================
+END OF FUNCTION INDEX
+================================================================================
